@@ -1,0 +1,48 @@
+<div class="content">
+    <div class="headerRow">
+        <img src="/assets/img/burger.jpg" width="150px" height="100px"> <h1>Eat-A-Burger</h1>
+    </div>
+    <div class="container">
+        <div id="leftside">
+            <label>List of burgers to choose from</label>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Burger Name</th>
+                    <th></th>
+                </tr>
+            {{#each burgers}}
+                <tr>
+                    {{#unless devoured}}
+                        <td>{{this.id}}</td>
+                        <td>{{this.burger_name}}</td>
+                        <td><button data-id="{{this.id}}" class="devoured">Devoured</button></td>
+                    {{/unless}}
+                </tr>
+            {{/each}}
+            </table>
+        </div>
+        <h2>Add a Burger you are craving for</h2>
+        <form class="create-form">
+            <div class="form-group">
+                <textarea id="burger_name"></textarea>        
+                <button type="submit">Add Burger</button>
+            </div>
+        </form>
+        <div id="rightSide">
+            <h2>Burger you have eaten</h2>
+            {{#each burgers}}
+                <tr>
+                    {{#if devoured}}
+                    <td>{{this.id}}</td>
+                    <td>{{this.burger_name}}</td>
+                    {{/if}}
+                </tr><br>
+            {{/each}}
+            
+        </div>
+        <br><br>
+
+    </div>
+</div>
+
