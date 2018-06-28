@@ -1,46 +1,64 @@
+<br>
 <div class="content">
-    <div class="headerRow">
-        <img src="/assets/img/burger.jpg" width="150px" height="100px"> <h1>Eat-A-Burger</h1>
+    <div class="headerRow" align="center">
+        <img src="/assets/img/burger.jpg" width="150px" height="100px"> <font size="5" >Eat-A-Burger</font>
     </div>
     <div class="container">
-        <div id="leftside">
-            <label>List of burgers to choose from</label>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Burger Name</th>
-                    <th></th>
-                </tr>
-            {{#each burgers}}
-                <tr>
-                    {{#unless devoured}}
-                        <td>{{this.id}}</td>
-                        <td>{{this.burger_name}}</td>
-                        <td><button data-id="{{this.id}}" class="devoured">Devoured</button></td>
-                    {{/unless}}
-                </tr>
-            {{/each}}
-            </table>
-        </div>
-        <h2>Add a Burger you are craving for</h2>
-        <form class="create-form">
-            <div class="form-group">
-                <textarea id="burger_name"></textarea>        
-                <button type="submit">Add Burger</button>
-            </div>
-        </form>
-        <div id="rightSide">
-            <h2>Burger you have eaten</h2>
-            {{#each burgers}}
-                <tr>
-                    {{#if devoured}}
-                    <td>{{this.id}}</td>
-                    <td>{{this.burger_name}}</td>
-                    {{/if}}
-                </tr><br>
-            {{/each}}
-            
-        </div>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <label><h3>List of burgers to choose from</h3></label>
+                        <table class="dataTable">
+                            <tr>
+                                <th><h4>ID</h4></th>
+                                <th><h4>Burger Name</h4></th>
+                                <th></th>
+                            </tr>
+                        {{#each burgers}}
+                            <tr>
+                                {{#unless devoured}}
+                                    <td><h5>{{this.id}}</h5></td>
+                                    <td><h5>{{this.burger_name}}</h5></td>
+                                    <td><h5><button data-id="{{this.id}}" class="devoured">Devoured</h5></button></td>
+                                {{/unless}}
+                            </tr>
+                        {{/each}}
+                        </table>
+                    </div>
+                </td>
+                <td>
+                    <h3>Add a Burger you are craving for</h3>
+                    <form class="create-form">
+                        <div class="form-group">
+                            <textarea id="burger_name"></textarea>        
+                            <button type="submit"><h5>Add Burger</h5></button>
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <div>
+                        <label><h3>Burger you have eaten</h3></label>
+                        <table class="dataTable" align="center">
+                            <tr>
+                                <th><h4>ID</h4></th>
+                                <th><h4>Burger Name</h4></th>
+                                <th></th>
+                            </tr>
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                <tr>
+                                    <td><h5>{{this.id}}</h5></td>
+                                    <td><h5>{{this.burger_name}}</h5></td>
+                                </tr>
+                            {{/if}}
+                        {{/each}}
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
         <br><br>
 
     </div>
