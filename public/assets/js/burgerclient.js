@@ -26,7 +26,7 @@ $(function(){
       }); //end of post method
       
     $(".devoured").on("click", function(event) {
-      alert("clicked");
+      //alert("clicked");
         var id = $(this).data("id");
         var newDevoured = {
             devoured: true
