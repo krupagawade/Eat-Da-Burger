@@ -10,17 +10,17 @@ else{
   host: 'o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   user: 'pltq2rhd4v050ywr',
   password: 'bac6tsupozf7hbuy',
-  database: 'burgers_db'
-  });
-}
+    database: 'burgers_db'
+   });
+ }
 
-// var connection = mysql.createConnection({
-//   host: "127.0.0.1",
-//   port: 3307,
-//   user: "NWTrainingUser",
-//   password: "NWKrupa123",
-//   database: "burgers_db"
-// });
+//var connection = mysql.createConnection({
+//  host: "127.0.0.1",
+//  port: 3307,
+  //user: "NWTrainingUser",
+ // password: "NWKrupa123",
+ // database: "burgers_db2"
+//});
 
 // Make connection.
 connection.connect(function(err) {

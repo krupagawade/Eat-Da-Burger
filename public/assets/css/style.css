@@ -12,25 +12,3 @@ body{
     color: blue;
 }
 
-td{
-    margin: 10px;
-}
-
-.create-form {
-    width: 500px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-
-.container{
-    display: inline-block;
-    align-content: center;
-    width: 100%;
-}
-
-.headerRow{
-    display: inline-block;
-    align-content: center;
-    width: 100%;
-}
